@@ -1,7 +1,6 @@
 from disnake.ext import commands
 from disnake import Intents, Status, Activity, ActivityType
 
-
 async def main(TOKEN:str):
     intents = Intents.default()
     intents.message_content = True
