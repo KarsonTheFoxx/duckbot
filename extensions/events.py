@@ -15,7 +15,7 @@ async def on_reaction_add(reaction:Reaction, _:User):
     if reaction.count == data["starboard-threshold"] and reaction.emoji == "⭐":
         reaction_channel = reaction.message.guild.get_channel(data["starboard-channel-id"])
         
-        await reaction_channel.send(embed=Embed(title=f":star: Starboard #{data["starboard-count"]+1}", description=reaction.message.content, color=Color.random()))
+        await reaction_channel.send(embed=Embed(title=f":star: Starboard #{data['starboard-count']+1}", description=reaction.message.content, color=Color.random()))
 
         data["starboard-count"] += 1
         
