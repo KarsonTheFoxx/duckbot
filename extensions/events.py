@@ -18,7 +18,7 @@ async def on_reaction_add(reaction:Reaction, _:User):
         await starboard_channel.send(
             content=reaction.message.author.mention,
             embed = Embed(
-                title=f":star: Starboard #{data["starboard-count"]+1}", 
+                title=f":star: Starboard #{data['starboard-count']+1}", 
                 description=reaction.message.content, color=Color.random()).add_field(
                     name="Jump to message", 
                     value=reaction.message.jump_url).set_thumbnail(
